@@ -12,3 +12,6 @@ df[df.columns-["column1","column2"]]
 from sklearn import preprocessing
 label_encoder = preprocessing.LabelEncoder()
 df["religion"] = label_encoder.fit_transform(df["religion"])
+
+####Finding max value in row
+row_index = y.argmax(axis=0)
