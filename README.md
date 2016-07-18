@@ -4,6 +4,9 @@
 Impute with Mode
 s.numeric(names(sort(-table(column_name)))[1])
 
+#####Delete columns using Pandas
+df[df.columns-["column1","column2"]]
+
 
 #####String to numeric conversion in Pandas
 from sklearn import preprocessing
