@@ -15,3 +15,29 @@ df["religion"] = label_encoder.fit_transform(df["religion"])
 
 ####Finding max value in row
 row_index = y.argmax(axis=0)
+
+#####Converting to cumulative days
+
+temp <-  data.frame(rul)
+temp$failure <- as.character(temp$failure)
+str(temp)
+
+seq_of_fail <- function(x){
+  j <- 0
+  for (i in 1:nrow(x)){
+    if(x[,7][i]=="none"){
+      j<- j+1 
+      x[,8][i] <- j
+    }
+    else{
+      x[,8][i] <- 0
+      j <- 0
+    }
+  }
+  return(x)
+}
+
+
+z <- seq_of_fail(temp)
+
+#####################################################
