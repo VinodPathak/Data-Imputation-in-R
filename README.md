@@ -41,3 +41,7 @@ seq_of_fail <- function(x){
 z <- seq_of_fail(temp)
 
 #####################################################
+##Creating sequence of ids
+custo_freq <- data.frame(table(new_train$people_id))
+bind <- sapply(custo_freq[,2],function(x) seq(1,x))
+dd <- data.frame(unlist(bind))
