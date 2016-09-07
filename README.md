@@ -45,3 +45,6 @@ z <- seq_of_fail(temp)
 custo_freq <- data.frame(table(new_train$people_id))
 bind <- sapply(custo_freq[,2],function(x) seq(1,x))
 dd <- data.frame(unlist(bind))
+####################################################
+mode of dataframe rows
+ensemble_model[['PREDICTED_Class']] <- apply(ensemble_model,1,function(x)  {tab <- table(x); names(tab)[which.max(tab)]})
